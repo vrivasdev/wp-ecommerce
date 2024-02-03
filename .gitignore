@@ -25,6 +25,8 @@ wp-config.php
 
 # Example plugin
 /wp-content/plugins/hello.php
+wp-content/plugins/wp-laravel-dd-master/
+api-products/
 
 # Uploads
 /wp-content/uploads/
