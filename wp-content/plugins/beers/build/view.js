@@ -255,7 +255,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const App = () => {
+const BeersBlock = () => {
   const api = 'http://localhost:3000/api/stock-price';
   const importImages = __webpack_require__("./products sync \\.(png%7Cjpe?g%7Csvg)$");
   const images = importImages.keys().map(importImages);
@@ -297,7 +297,9 @@ const App = () => {
     });
     return finalImg;
   };
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("main", null, productData && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("main", {
+    className: "beers-block"
+  }, productData && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "header"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: getImagePath(productData.image),
@@ -312,7 +314,7 @@ const App = () => {
     className: "details__description"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, "Description"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, productData.information))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "sizes"
-  }, console.log(productData.skus), productData.skus.map(sku => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, sku.name))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
+  }, productData.skus.map(sku => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, sku.name))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "buttons"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
     className: "buttons__chain"
@@ -322,7 +324,7 @@ const App = () => {
 };
 _wordpress_dom_ready__WEBPACK_IMPORTED_MODULE_1___default()(function () {
   const container = document.querySelector(".wp-block-post-content");
-  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.render)((0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(App, null), container);
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.render)((0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(BeersBlock, null), container);
 });
 
 /* eslint-enable no-console */

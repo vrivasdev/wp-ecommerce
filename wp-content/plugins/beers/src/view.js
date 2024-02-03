@@ -23,7 +23,7 @@
 import domReady from "@wordpress/dom-ready";
 import { render, useEffect, useState } from "@wordpress/element";
 
-const App = () => {
+const BeersBlock = () => {
     const api = 'http://localhost:3000/api/stock-price';
     const importImages = require.context('../products', false, /\.(png|jpe?g|svg)$/);
     const images = importImages.keys().map(importImages);
@@ -72,7 +72,7 @@ const App = () => {
     };
 
     return (
-        <main>
+        <main className="beers-block">
             {
                 productData && (
                     <>
@@ -97,7 +97,6 @@ const App = () => {
                             </div>
                         </section>
                         <section className="sizes">
-                            { console.log(productData.skus)}
                             { productData.skus.map(sku => (
                                 <div>{sku.name}</div>
                             ) )}
@@ -116,7 +115,7 @@ const App = () => {
 
 domReady(function () {
     const container = document.querySelector(".wp-block-post-content");
-    render(<App />, container);
+    render(<BeersBlock />, container);
 });
 
 /* eslint-enable no-console */
