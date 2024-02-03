@@ -28,3 +28,16 @@ id=405%3A367&t=aEeRJiFSK3eFij3X-0
 Feel free to use your creativity to design the tablet and desktop resolution as you see fit.  
 For the solution, you should use Gutenberg custom blocks and deliver the codebase.  
 Good luck with the challenge! 
+
+## INSTRUCTIONS
+1. Setup the API node's system to retrieve services by port's number 3000. See the api-products repository on github
+2. Optional: Install your wordpress project within docker conmpose file. Just run it the following command line => "docker compose up"
+   Note: You might copy the nodeJS api folder into the root's WP project, by this way you'll be able to access to the endpoint once up and running
+3. After WP's project setup you must enable two plugins: 
+    3.1 Beer E-Commerce: It will connect with the endpoint and create all pages needed by each product
+    3.2 Beers: It will create the Beer Block component for each page already created
+4. Go to any product's page and add the Custom Beer's block 
+    Note: You'll get a harcoded sku code at the first load. But user will be able to
+    click on each sizes and component will retrieve the stock info related. 
+    I will suggest to add a selected sku code in the "products.js" by this way the
+    block might display a default sku code
