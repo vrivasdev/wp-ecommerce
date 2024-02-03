@@ -22,13 +22,14 @@
 
 import domReady from "@wordpress/dom-ready";
 import { render, useEffect, useState } from "@wordpress/element";
+import { ReactComponent as Chain } from "../assets/chain.svg";
 
 const BeersBlock = () => {
     const api = 'http://localhost:3000/api/stock-price';
     const importImages = require.context('../products', false, /\.(png|jpe?g|svg)$/);
     const images = importImages.keys().map(importImages);
     // TODO: The DB info should include the selected sku code by this way I can avoid the harcoded value
-    const defaultCode = '10167'; 
+    const defaultCode = '10167';
     const [productData, setProductData] = useState(null);
     const [selectedSku, setSelectedSku] = useState(null);
 
@@ -51,11 +52,11 @@ const BeersBlock = () => {
 
         return () => clearInterval(intervalId); // Cleanup on component unmount
     }, []);
-    
+
     const getImagePath = (comparedImg) => {
         let imagePath = '';
         let finalImg = '';
-        
+
         images.forEach(imageUrl => {
             const imageNameWithHash = imageUrl.split('/').pop();
             const [imageName, hash, format] = imageNameWithHash.split('.');
@@ -67,7 +68,7 @@ const BeersBlock = () => {
                 finalImg = imageUrl;
             }
         });
-        
+
         return finalImg;
     };
 
@@ -86,23 +87,27 @@ const BeersBlock = () => {
                         <section className="details">
                             <div className="details__header">
                                 <h4>{productData.brand}</h4>
-                                <p>${productData.priceInDollars}</p>
+                                <span className="details__price">${productData.priceInDollars}</span>
                             </div>
                             <div className="details__stock">
                                 <span>Origin: {productData.origin} | Stock: ${productData.stock}</span>
                             </div>
                             <div className="details__description">
-                                <strong>Description</strong>
+                                <span className="subtitle">Description</span>
                                 <p>{productData.information}</p>
                             </div>
                         </section>
                         <section className="sizes">
-                            { productData.skus.map(sku => (
-                                <div>{sku.name}</div>
-                            ) )}
+                            <span className="subtitle">Size</span>
+                            <div className="sizes__list">
+                                {productData.skus.map(sku => (
+                                    <div className="sizes__button">{sku.name}</div>
+                                ))}
+                            </div>
+
                         </section>
                         <section className="buttons">
-                            <button className="buttons__chain"></button>
+                            <Chain/>
                             <button className="buttons__add">Add to Cart</button>
                         </section>
                     </>

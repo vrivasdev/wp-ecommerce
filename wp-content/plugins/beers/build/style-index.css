@@ -1,10 +1,10 @@
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************/
+/* Colors */
 .beers-block {
   background-color: #f7f7f7;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 10px;
   font-family: "Arial", sans-serif;
 }
@@ -19,12 +19,15 @@
   max-height: 100%;
 }
 .beers-block .details h4 {
-  font-size: 1.5rem;
+  font-size: 24px;
+  font-weight: 700;
   margin-bottom: 10px;
+  line-height: 31.25px;
 }
-.beers-block .details p {
-  font-size: 1.2rem;
-  color: #333;
+.beers-block .details__price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FF9F24;
 }
 .beers-block .details .details__header {
   display: flex;
@@ -32,33 +35,48 @@
   align-items: center;
 }
 .beers-block .details .details__stock {
-  margin-top: 10px;
+  color: #969696;
+  font-size: 14px;
+  font-weight: 400;
 }
 .beers-block .details .details__description {
   margin-top: 20px;
 }
-.beers-block .details .details__description strong {
+.beers-block .details .details__description p {
+  font-size: 14px;
+  color: #969696;
+  font-weight: 400;
+  line-height: 24px;
+}
+.beers-block .subtitle {
   display: block;
-  font-size: 1.2rem;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.83px;
   margin-bottom: 10px;
 }
-.beers-block .details .details__description p {
-  font-size: 1rem;
-  color: #666;
-}
-.beers-block .sizes {
+.beers-block .sizes__list {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
   margin-top: 20px;
+  justify-content: left;
+  align-items: center;
 }
-.beers-block .sizes div {
-  background-color: #fff;
-  padding: 10px;
+.beers-block .sizes__button {
+  background-color: #f7f7f7;
+  padding: 3px 10px;
   margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #969696;
+  border-radius: 18.5px;
   font-size: 1rem;
+  color: #969696;
+  font-size: 14px;
+  font-weight: 400;
+}
+.beers-block .sizes__button:hover {
+  cursor: pointer;
+  color: #FF9F24;
+  border-color: #FF9F24;
 }
 .beers-block .sizes::-webkit-scrollbar {
   height: 10px;
@@ -72,15 +90,18 @@
 }
 .beers-block .buttons {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 .beers-block .buttons .buttons__chain,
 .beers-block .buttons .buttons__add {
-  background-color: #0073e6;
-  color: #fff;
-  padding: 10px 15px;
+  background-color: #FF9F24;
+  color: #FFFFFF;
+  padding: 15px 60px;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
 }
 .beers-block .buttons .buttons__chain {
@@ -108,14 +129,17 @@
     font-size: 1.4rem;
   }
   .beers-block .details .details__description p {
-    font-size: 1.2rem;
+    font-size: 16px;
   }
   .beers-block .sizes div {
-    font-size: 1.2rem;
+    font-size: 16px;
   }
   .beers-block .buttons .buttons__chain,
   .beers-block .buttons .buttons__add {
-    font-size: 1.4rem;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #FF9F24;
+    color: #FFFFFF;
   }
 }
 /* Desktop Styles */
@@ -127,7 +151,7 @@
     font-size: 2.5rem;
   }
   .beers-block .details p {
-    font-size: 1.6rem;
+    font-size: 16px;
   }
   .beers-block .details .details__header h4 {
     font-size: 2.5rem;
@@ -139,15 +163,22 @@
     font-size: 2rem;
   }
   .beers-block .details .details__description p {
-    font-size: 1.8rem;
+    font-size: 16px;
   }
   .beers-block .sizes div {
-    font-size: 1.6rem;
+    font-size: 16px;
   }
   .beers-block .buttons .buttons__chain,
   .beers-block .buttons .buttons__add {
-    font-size: 1.8rem;
+    font-size: 16px;
   }
+}
+.wp-site-blocks {
+  background-color: #f7f7f7;
+}
+
+.wp-block-group-is-layout-constrained {
+  display: none;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

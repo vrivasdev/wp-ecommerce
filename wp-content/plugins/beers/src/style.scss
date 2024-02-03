@@ -1,7 +1,14 @@
+/* Colors */
+$orange: #FF9F24;
+$black: #0F0D23;
+$black2: #323232;
+$gray: #969696;
+$background: #f7f7f7;
+$white: #FFFFFF;
+
 .beers-block {
-	background-color: #f7f7f7;
+	background-color: $background;
 	padding: 20px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	margin: 10px;
 	font-family: 'Arial', sans-serif;
 
@@ -12,6 +19,7 @@
 			align-items: center;
 			height: 100%;
 		}
+
 		img {
 			max-width: 100%;
 			max-height: 100%;
@@ -20,12 +28,16 @@
 
 	.details {
 		h4 {
-			font-size: 1.5rem;
+			font-size: 24px;
+			font-weight: 700;
 			margin-bottom: 10px;
+			line-height: 31.25px;
 		}
-		p {
-			font-size: 1.2rem;
-			color: #333;
+
+		&__price {
+			font-size: 24px;
+			font-weight: 700;
+			color: $orange;
 		}
 
 		.details__header {
@@ -35,38 +47,54 @@
 		}
 
 		.details__stock {
-			margin-top: 10px;
+			color: $gray;
+			font-size: 14px;
+			font-weight: 400;
 		}
 
 		.details__description {
 			margin-top: 20px;
-
-			strong {
-				display: block;
-				font-size: 1.2rem;
-				margin-bottom: 10px;
-			}
-
 			p {
-				font-size: 1rem;
-				color: #666;
+				font-size: 14px;
+				color: $gray;
+				font-weight: 400;
+				line-height: 24px;
 			}
 		}
 	}
 
-	.sizes {
-		display: flex;
-		flex-wrap: nowrap;
-		overflow-x: auto;
-		margin-top: 20px;
+	.subtitle {
+		display: block;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 20.83px;
+		margin-bottom: 10px;
+	}
 
-		div {
-			background-color: #fff;
-			padding: 10px;
+	.sizes {
+		&__list {
+			display: flex;
+			flex-wrap: nowrap;
+			margin-top: 20px;
+			justify-content: left;
+			align-items: center;
+		}
+
+		&__button {
+			background-color: $background;
+			padding: 3px 10px;
 			margin-right: 10px;
-			border: 1px solid #ccc;
-			border-radius: 5px;
+			border: 1px solid $gray;
+			border-radius: 18.5px;
 			font-size: 1rem;
+			color: $gray;
+			font-size: 14px;
+			font-weight: 400;
+			&:hover {
+				cursor: pointer;
+				color: $orange;
+				border-color: $orange
+			}
 		}
 	}
 
@@ -86,15 +114,17 @@
 
 	.buttons {
 		margin-top: 20px;
-
+		display: flex;
+		justify-content: space-around;
 		.buttons__chain,
 		.buttons__add {
-			background-color: #0073e6;
-			color: #fff;
-			padding: 10px 15px;
+			background-color: $orange;
+			color: $white;
+			padding: 15px 60px;
 			border: none;
-			border-radius: 5px;
-			font-size: 1rem;
+			border-radius: 12px;
+			font-size: 16px;
+			font-weight: 500;
 			cursor: pointer;
 		}
 
@@ -102,6 +132,7 @@
 			margin-right: 10px;
 		}
 	}
+
 }
 
 /* Tablet Styles */
@@ -134,14 +165,14 @@
 				}
 
 				p {
-					font-size: 1.2rem;
+					font-size: 16px;
 				}
 			}
 		}
 
 		.sizes {
 			div {
-				font-size: 1.2rem;
+				font-size: 16px;
 			}
 		}
 
@@ -149,7 +180,10 @@
 
 			.buttons__chain,
 			.buttons__add {
-				font-size: 1.4rem;
+				font-size: 16px;
+				font-weight: 500;
+				background-color: $orange;
+				color: $white;
 			}
 		}
 	}
@@ -166,7 +200,7 @@
 			}
 
 			p {
-				font-size: 1.6rem;
+				font-size: 16px;
 			}
 
 			.details__header {
@@ -185,23 +219,31 @@
 				}
 
 				p {
-					font-size: 1.8rem;
+					font-size: 16px;
 				}
 			}
 		}
 
 		.sizes {
 			div {
-				font-size: 1.6rem;
+				font-size: 16px;
 			}
 		}
 
 		.buttons {
-
 			.buttons__chain,
 			.buttons__add {
-				font-size: 1.8rem;
+				font-size: 16px;
 			}
 		}
 	}
+}
+
+.wp-site-blocks {
+	background-color: $background;
+}
+
+// Hide page's title
+.wp-block-group-is-layout-constrained {
+	display: none;
 }

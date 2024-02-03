@@ -1,6 +1,65 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./assets/chain.svg":
+/*!**************************!*\
+  !*** ./assets/chain.svg ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ReactComponent: () => (/* binding */ SvgChain),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _rect, _circle, _path, _circle2, _circle3;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var SvgChain = function SvgChain(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 54,
+    height: 54,
+    fill: "none"
+  }, props), _rect || (_rect = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("rect", {
+    width: 53.2,
+    height: 53.2,
+    x: 0.4,
+    y: 0.4,
+    stroke: "#FF9F24",
+    strokeWidth: 0.8,
+    rx: 11.6
+  })), _circle || (_circle = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("circle", {
+    cx: 27,
+    cy: 21,
+    r: 4.25,
+    stroke: "#FF9F24",
+    strokeWidth: 1.5
+  })), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    fill: "#fff",
+    stroke: "#FF9F24",
+    strokeWidth: 1.5,
+    d: "M19.306 24.597a3.25 3.25 0 0 1 3.225-2.847h8.938a3.25 3.25 0 0 1 3.225 2.847l1 8a3.25 3.25 0 0 1-3.225 3.653H21.53a3.25 3.25 0 0 1-3.225-3.653z"
+  })), _circle2 || (_circle2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("circle", {
+    cx: 24.75,
+    cy: 25.75,
+    r: 0.75,
+    fill: "#FF9F24"
+  })), _circle3 || (_circle3 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("circle", {
+    cx: 28.75,
+    cy: 25.75,
+    r: 0.75,
+    fill: "#FF9F24"
+  })));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTQiIGhlaWdodD0iNTQiIHZpZXdCb3g9IjAgMCA1NCA1NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMC40IiB5PSIwLjQiIHdpZHRoPSI1My4yIiBoZWlnaHQ9IjUzLjIiIHJ4PSIxMS42IiBzdHJva2U9IiNGRjlGMjQiIHN0cm9rZS13aWR0aD0iMC44Ii8+CjxjaXJjbGUgY3g9IjI3IiBjeT0iMjEiIHI9IjQuMjUiIHN0cm9rZT0iI0ZGOUYyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPHBhdGggZD0iTTE5LjMwNjIgMjQuNTk2OUMxOS41MDk1IDIyLjk3MDUgMjAuODkyMSAyMS43NSAyMi41MzExIDIxLjc1SDMxLjQ2ODlDMzMuMTA3OSAyMS43NSAzNC40OTA1IDIyLjk3MDUgMzQuNjkzOCAyNC41OTY5TDM1LjY5MzggMzIuNTk2OUMzNS45MzYyIDM0LjUzNjcgMzQuNDIzNyAzNi4yNSAzMi40Njg5IDM2LjI1SDIxLjUzMTFDMTkuNTc2MyAzNi4yNSAxOC4wNjM4IDM0LjUzNjcgMTguMzA2MiAzMi41OTY5TDE5LjMwNjIgMjQuNTk2OVoiIGZpbGw9IndoaXRlIiBzdHJva2U9IiNGRjlGMjQiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjxjaXJjbGUgY3g9IjI0Ljc1IiBjeT0iMjUuNzUiIHI9IjAuNzUiIGZpbGw9IiNGRjlGMjQiLz4KPGNpcmNsZSBjeD0iMjguNzUiIGN5PSIyNS43NSIgcj0iMC43NSIgZmlsbD0iI0ZGOUYyNCIvPgo8L3N2Zz4K");
+
+/***/ }),
+
 /***/ "./products sync \\.(png%7Cjpe?g%7Csvg)$":
 /*!************************************************************!*\
   !*** ./products/ sync nonrecursive \.(png%7Cjpe?g%7Csvg)$ ***!
@@ -230,6 +289,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_dom_ready__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_dom_ready__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _assets_chain_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/chain.svg */ "./assets/chain.svg");
 
 /**
  * Use this file for JavaScript code that you want to run in the front-end
@@ -252,6 +312,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
+
 
 
 
@@ -308,17 +369,25 @@ const BeersBlock = () => {
     className: "details"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "details__header"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, productData.brand), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "$", productData.priceInDollars)), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, productData.brand), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    className: "details__price"
+  }, "$", productData.priceInDollars)), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "details__stock"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "Origin: ", productData.origin, " | Stock: $", productData.stock)), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "details__description"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, "Description"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, productData.information))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    className: "subtitle"
+  }, "Description"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, productData.information))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "sizes"
-  }, productData.skus.map(sku => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, sku.name))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    className: "subtitle"
+  }, "Size"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "sizes__list"
+  }, productData.skus.map(sku => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "sizes__button"
+  }, sku.name)))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "buttons"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    className: "buttons__chain"
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_assets_chain_svg__WEBPACK_IMPORTED_MODULE_3__.ReactComponent, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
     className: "buttons__add"
   }, "Add to Cart"))));
 };
