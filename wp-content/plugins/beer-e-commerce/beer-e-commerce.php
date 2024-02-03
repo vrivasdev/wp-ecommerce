@@ -41,6 +41,7 @@ function beer_e_commerce_activate() {
             // Add custom fields if needed
             update_post_meta($post_id, 'brand', $product['brand']);
             update_post_meta($post_id, 'url', $product['url']);
+            update_post_meta($post_id, 'product_id', $product['id']);
         }
     }
 }
