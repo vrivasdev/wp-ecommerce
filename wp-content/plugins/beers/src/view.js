@@ -27,16 +27,29 @@ const App = () => {
     const api = 'http://localhost:3000/api/stock-price';
     const importImages = require.context('../products', false, /\.(png|jpe?g|svg)$/);
     const images = importImages.keys().map(importImages);
-    const defaultCode = '10167';
+    // TODO: The DB info should include the selected sku code by this way I can avoid the harcoded value
+    const defaultCode = '10167'; 
     const [productData, setProductData] = useState(null);
     const [selectedSku, setSelectedSku] = useState(null);
 
     useEffect(() => {
-        // Fetch data from the API
-        fetch(`${api}/${defaultCode}`)
-            .then(response => response.json())
-            .then(data => setProductData(data))
-            .catch(error => console.error('Error fetching data:', error));
+        const fetchData = async () => {
+            try {
+                const response = await fetch(`${api}/${defaultCode}`);
+                const data = await response.json();
+                setProductData(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        // Fetch data initially
+        fetchData();
+
+        // Fetch data every 5 seconds
+        const intervalId = setInterval(fetchData, 5000);
+
+        return () => clearInterval(intervalId); // Cleanup on component unmount
     }, []);
     
     const getImagePath = (comparedImg) => {
