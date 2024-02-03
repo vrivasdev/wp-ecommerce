@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       Beers
  * Description:       Example block scaffolded with Create Block tool.
@@ -13,9 +14,10 @@
  * @package           create-block
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
+
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -24,7 +26,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function beers_beers_block_init() {
-	register_block_type( __DIR__ . '/build' );
+
+function beers_beers_block_init()
+{
+	register_block_type(__DIR__ . '/build');
 }
-add_action( 'init', 'beers_beers_block_init' );
+
+
+add_action('init', 'beers_beers_block_init');
