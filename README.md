@@ -1,4 +1,4 @@
-Welcome to the Beer E-Commerce Challenge! 
+## Beer E-Commerce
 
 In this challenge, we aim to create a beer e-commerce.  
 We have two main sources of data: a file named "products.js" containing product details and 
