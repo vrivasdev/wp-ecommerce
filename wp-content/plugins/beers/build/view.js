@@ -358,6 +358,13 @@ const BeersBlock = () => {
     });
     return finalImg;
   };
+  const handleClick = skuCode => {
+    // Fetch data for the selected SKU
+    fetch(`${api}/${skuCode}`).then(response => response.json()).then(data => {
+      setProductData(data);
+      setSelectedSku(skuCode);
+    }).catch(error => console.error('Error fetching data:', error));
+  };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("main", {
     className: "beers-block"
   }, productData && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
@@ -383,8 +390,10 @@ const BeersBlock = () => {
     className: "subtitle"
   }, "Size"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "sizes__list"
-  }, productData.skus.map(sku => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "sizes__button"
+  }, productData && productData.skus.map(sku => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+    key: sku.code,
+    className: selectedSku === sku.code ? 'sizes__button--selected' : 'sizes__button',
+    onClick: () => handleClick(sku.code)
   }, sku.name)))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "buttons"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_assets_chain_svg__WEBPACK_IMPORTED_MODULE_3__.ReactComponent, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {

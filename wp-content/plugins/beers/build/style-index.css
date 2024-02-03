@@ -3,7 +3,7 @@
   \***************************************************************************************************************************************************************************************************************************************/
 /* Colors */
 .beers-block {
-  background-color: #f7f7f7;
+  background-color: white;
   padding: 20px;
   margin: 10px;
   font-family: "Arial", sans-serif;
@@ -29,20 +29,20 @@
   font-weight: 700;
   color: #FF9F24;
 }
-.beers-block .details .details__header {
+.beers-block .details__header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
-.beers-block .details .details__stock {
+.beers-block .details__stock {
   color: #969696;
   font-size: 14px;
   font-weight: 400;
 }
-.beers-block .details .details__description {
+.beers-block .details__description {
   margin-top: 20px;
 }
-.beers-block .details .details__description p {
+.beers-block .details__description p {
   font-size: 14px;
   color: #969696;
   font-weight: 400;
@@ -63,7 +63,7 @@
   align-items: center;
 }
 .beers-block .sizes__button {
-  background-color: #f7f7f7;
+  background-color: white;
   padding: 3px 10px;
   margin-right: 10px;
   border: 1px solid #969696;
@@ -77,6 +77,17 @@
   cursor: pointer;
   color: #FF9F24;
   border-color: #FF9F24;
+}
+.beers-block .sizes__button--selected {
+  background-color: white;
+  padding: 3px 10px;
+  margin-right: 10px;
+  border: 1px solid #FF9F24;
+  border-radius: 18.5px;
+  font-size: 1rem;
+  color: #FF9F24;
+  font-size: 14px;
+  font-weight: 400;
 }
 .beers-block .sizes::-webkit-scrollbar {
   height: 10px;
@@ -119,23 +130,22 @@
   .beers-block .details p {
     font-size: 1.4rem;
   }
-  .beers-block .details .details__header h4 {
+  .beers-block .details__header h4 {
     font-size: 2rem;
   }
-  .beers-block .details .details__header p {
+  .beers-block .details__header p {
     font-size: 1.4rem;
   }
-  .beers-block .details .details__description strong {
+  .beers-block .details__description strong {
     font-size: 1.4rem;
   }
-  .beers-block .details .details__description p {
+  .beers-block .details__description p {
     font-size: 16px;
   }
   .beers-block .sizes div {
     font-size: 16px;
   }
-  .beers-block .buttons .buttons__chain,
-  .beers-block .buttons .buttons__add {
+  .beers-block .buttons__chain, .beers-block .buttons__add {
     font-size: 16px;
     font-weight: 500;
     background-color: #FF9F24;
@@ -153,28 +163,27 @@
   .beers-block .details p {
     font-size: 16px;
   }
-  .beers-block .details .details__header h4 {
+  .beers-block .details__header h4 {
     font-size: 2.5rem;
   }
-  .beers-block .details .details__header p {
+  .beers-block .details__header p {
     font-size: 1.6rem;
   }
-  .beers-block .details .details__description strong {
+  .beers-block .details__description strong {
     font-size: 2rem;
   }
-  .beers-block .details .details__description p {
+  .beers-block .details__description p {
     font-size: 16px;
   }
   .beers-block .sizes div {
     font-size: 16px;
   }
-  .beers-block .buttons .buttons__chain,
-  .beers-block .buttons .buttons__add {
+  .beers-block .buttons__chain, .beers-block .buttons__add {
     font-size: 16px;
   }
 }
 .wp-site-blocks {
-  background-color: #f7f7f7;
+  background-color: white;
 }
 
 .wp-block-group-is-layout-constrained {

@@ -72,6 +72,17 @@ const BeersBlock = () => {
         return finalImg;
     };
 
+    const handleClick = (skuCode) => {
+        // Fetch data for the selected SKU
+        fetch(`${api}/${skuCode}`)
+            .then(response => response.json())
+            .then(data => {
+                setProductData(data);
+                setSelectedSku(skuCode);
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    };
+
     return (
         <main className="beers-block">
             {
@@ -100,8 +111,14 @@ const BeersBlock = () => {
                         <section className="sizes">
                             <span className="subtitle">Size</span>
                             <div className="sizes__list">
-                                {productData.skus.map(sku => (
-                                    <div className="sizes__button">{sku.name}</div>
+                                {productData && productData.skus.map(sku => (
+                                    <button 
+                                        key={sku.code} 
+                                        className={selectedSku === sku.code ? 'sizes__button--selected' : 'sizes__button'} 
+                                        onClick={() => handleClick(sku.code)}
+                                    >
+                                        {sku.name}
+                                    </button>
                                 ))}
                             </div>
 

@@ -3,7 +3,7 @@ $orange: #FF9F24;
 $black: #0F0D23;
 $black2: #323232;
 $gray: #969696;
-$background: #f7f7f7;
+$background: white;
 $white: #FFFFFF;
 
 .beers-block {
@@ -40,19 +40,19 @@ $white: #FFFFFF;
 			color: $orange;
 		}
 
-		.details__header {
+		&__header {
 			display: flex;
 			justify-content: space-between;
-			align-items: center;
+			align-items: baseline;
 		}
 
-		.details__stock {
+		&__stock {
 			color: $gray;
 			font-size: 14px;
 			font-weight: 400;
 		}
 
-		.details__description {
+		&__description {
 			margin-top: 20px;
 			p {
 				font-size: 14px;
@@ -95,6 +95,17 @@ $white: #FFFFFF;
 				color: $orange;
 				border-color: $orange
 			}
+		}
+		&__button--selected {
+			background-color: $background;
+			padding: 3px 10px;
+			margin-right: 10px;
+			border: 1px solid $orange;
+			border-radius: 18.5px;
+			font-size: 1rem;
+			color: $orange;
+			font-size: 14px;
+			font-weight: 400;
 		}
 	}
 
@@ -149,7 +160,7 @@ $white: #FFFFFF;
 				font-size: 1.4rem;
 			}
 
-			.details__header {
+			&__header {
 				h4 {
 					font-size: 2rem;
 				}
@@ -159,7 +170,7 @@ $white: #FFFFFF;
 				}
 			}
 
-			.details__description {
+			&__description {
 				strong {
 					font-size: 1.4rem;
 				}
@@ -177,9 +188,8 @@ $white: #FFFFFF;
 		}
 
 		.buttons {
-
-			.buttons__chain,
-			.buttons__add {
+			&__chain,
+			&__add {
 				font-size: 16px;
 				font-weight: 500;
 				background-color: $orange;
@@ -203,7 +213,7 @@ $white: #FFFFFF;
 				font-size: 16px;
 			}
 
-			.details__header {
+			&__header {
 				h4 {
 					font-size: 2.5rem;
 				}
@@ -213,7 +223,7 @@ $white: #FFFFFF;
 				}
 			}
 
-			.details__description {
+			&__description {
 				strong {
 					font-size: 2rem;
 				}
@@ -231,8 +241,8 @@ $white: #FFFFFF;
 		}
 
 		.buttons {
-			.buttons__chain,
-			.buttons__add {
+			&__chain,
+			&__add {
 				font-size: 16px;
 			}
 		}
